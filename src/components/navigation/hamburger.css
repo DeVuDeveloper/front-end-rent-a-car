@@ -1,12 +1,73 @@
-.hamburger-column {
-  font-weight: 900;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 30px;
-  padding-left: 20px;
-  color: #000;
-  font-size: 14px;
-  font-family: "Lato", sans-serif;
+/* Position and sizing of burger button */
+.hamburger-menu {
+  background-image:
+    linear-gradient(rgb(152, 192, 42) 0.8%, rgba(0, 0, 0, 0.8)),
+    url(https://www.cnet.com/a/img/resize/b5bad9fc09bf6d76cf8b5db6bca7d68fc49cdcac/2016/12/14/8ea41d9d-2a76-4f35-9d9d-1ef472f7d9dc/car-photography-how-to.jpg?auto=webp&fit=crop&height=675&width=1200);
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 26px;
+  height: 26px;
+  left: 26px;
+  top: 26px;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-burger-bars-hover {
+  background: #31b669;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #494743;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+.bm-menu {
+  background-image:
+    linear-gradient(rgb(152, 192, 42) 0.8%, rgba(0, 0, 0, 0.2)),
+    url(https://www.cnet.com/a/img/resize/b5bad9fc09bf6d76cf8b5db6bca7d68fc49cdcac/2016/12/14/8ea41d9d-2a76-4f35-9d9d-1ef472f7d9dc/car-photography-how-to.jpg?auto=webp&fit=crop&height=675&width=1200);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: #494640;
+  padding: 0.8em;
+}
+
+.bm-item {
+  display: inline-block;
+}
+
+.bm-overlay {
+  background: rgba(15, 15, 15, 0.3);
+}
+
+.hamburger-menu p:hover {
+  background-color: rgb(152, 192, 42);
+  padding: 0 5px;
+  color: #fff;
+}
+
+@media screen and (min-width: 1243px) {
+  .hamburger-menu {
+    display: none;
+  }
 }

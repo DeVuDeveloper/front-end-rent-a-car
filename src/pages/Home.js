@@ -1,28 +1,68 @@
 import React from 'react';
-import Sidebar from '../components/navigation/Sidebar';
+import { useSelector } from 'react-redux';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import SingleCar from './SingleCar';
 import Hamburger from '../components/navigation/Hamburger';
-import CarsCarousel from '../components/cars/CarsCarousel';
+import Sidebar from '../components/navigation/Sidebar';
+import './home.css';
 
-const Home = () => (
-  <div className="homepage">
-    <div className="h-screen flex overflow-hidden bg-white">
-      {/* Desktop */}
-      <div className="hidden lg:flex lg:flex-shrink-0">
+const Cars = () => {
+  const carsArr = useSelector((state) => state.cars);
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1240 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1240, min: 765 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 765, min: 0 },
+      items: 1,
+    },
+  };
+
+  return (
+    <section className="car-container">
+      <Hamburger pageWrapId="page-wrap" outerContainerId="outer-container" />
+      <div className="navbar">
         <Sidebar />
       </div>
-      <div className="flex flex-col min-w-0 flex-1 overflow-hidden mt-32 md:mt-1">
-        {/* Mobile */}
-        <Hamburger />
-        <div className="flex flex-col items-center w-screen lg:mt-14 lg:pr-44">
-          <h1 className="text-3xl text-slate-900 uppercase font-bold text-center">LATEST MODELS</h1>
-          <p className="text-gray-500 mt-1 text-lg">Please select a Car Model</p>
-        </div>
-        <div className="bg-green-10 flex flex-col items-center">
-          <CarsCarousel />
-        </div>
-      </div>
-    </div>
-  </div>
-);
+      <div className="one-car-container">
+        <header className="header-carousel">
+          <h1>This is Our Models for Rent</h1>
+          <h4>Please Select One Model</h4>
+        </header>
 
-export default Home;
+        <Carousel
+          className="carousel"
+          responsive={responsive}
+          infinite={true}
+          swipeable={false}
+          autoPlaySpeed={100}
+          draggable={false}
+          showDots={true}
+          ssr={true} // means to render carousel on server-side.
+        >
+          {carsArr.map((car) => (
+            <SingleCar
+              key={car.id}
+              carModel={car.carModel}
+              carPhoto={car.carImg}
+              carDescription={car.carDescription}
+              id={car.id}
+            />
+          ))}
+        </Carousel>
+      </div>
+    </section>
+  );
+};
+export default Cars;

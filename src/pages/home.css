@@ -1,0 +1,77 @@
+.car-container {
+  display: flex;
+}
+
+.navbar {
+  height: 90vh;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 2px solid rgb(189, 188, 182);
+}
+
+.one-car-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 80%;
+  align-self: center;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header-carousel {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 50px auto;
+}
+
+.header-carousel h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 3.4vh;
+  font-weight: bolder;
+}
+
+.header-carousel h4 {
+  font-family: 'Lato', sans-serif;
+  font-size: 2vh;
+  font-weight: bolder;
+  color: rgb(128, 119, 119);
+}
+
+.carousel {
+  padding: 140px;
+}
+
+.left {
+  color: rgb(78, 7, 7);
+}
+
+.right {
+  color: rgb(78, 7, 7);
+}
+
+@media screen and (max-width: 860px) {
+  .navbar {
+    display: none;
+  }
+
+  .header-carousel {
+    padding-top: 90px;
+  }
+
+  .one-car-container {
+    width: 100%;
+  }
+
+  .carousel {
+    padding: 0 140px;
+  }
+}
