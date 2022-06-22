@@ -20,7 +20,7 @@
 <a href="https://github.com/Gegardus/book-a-car-frontend#readme"><strong>Explore the docs »</strong></a>
 <br />
 <br />
- <a href="https://final-capstone-back.herokuapp.com/index.html">View Demo</a>
+ <a href="[https://final-capstone-back.herokuapp.com/index.html](https://frontend-rent-a-car.herokuapp.com/)">View Demo</a>
 .
 <a href="https://github.com/Gegardus/book-a-car-frontend/issues">Report Bug</a>
 ·
