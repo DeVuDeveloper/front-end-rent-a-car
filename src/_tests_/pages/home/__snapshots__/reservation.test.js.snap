@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should send reservations correctly 1`] = `
+<section
+  className="my-reservations"
+>
+  <header
+    className="flex flex-col px-8  h-fit fixed top-0 w-screen shadow-xl md:hidden"
+  >
+    <a
+      className="text-lg text-slate-50"
+      href="/"
+    >
+      <img
+        alt="logo"
+        className="w-24 block"
+        src="logo.png"
+      />
+    </a>
+    <nav>
+      <div
+        className="text-slate-50 mobile-btns"
+      >
+        <button
+          className=" text-lime-500 block"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            className="h-8"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          className="hidden text-slate-900"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            className="h-8"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="hidden"
+      >
+        <ul
+          className="flex flex-col text-slate-900 font-bold text-lg gap-8 items-center mt-44"
+        >
+          <li>
+            <a
+              href="/home"
+            >
+              Cars
+            </a>
+          </li>
+          <li>
+            <a
+              href="/reserve"
+            >
+              Reserve
+            </a>
+          </li>
+          <li>
+            <a
+              href="/reservations"
+            >
+              My reservations
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Add car
+            </a>
+          </li>
+          <li>
+            <a
+              href="/delete"
+            >
+              Delete car
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      className="hidden flex flex-col items-center mt-32"
+    >
+      <div
+        className="flex gap-2"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="social-icon"
+            className="w-8"
+            src="twitter-icon.png"
+          />
+        </a>
+        <a
+          href="/"
+        >
+          <img
+            alt="social-icon"
+            className="w-8"
+            src="facebook-icon.png"
+          />
+        </a>
+        <a
+          href="/"
+        >
+          <img
+            alt="social-icon"
+            className="w-8"
+            src="linkedin-icon.png"
+          />
+        </a>
+        <a
+          href="/"
+        >
+          <img
+            alt="social-icon"
+            className="w-8"
+            src="github-icon.png"
+          />
+        </a>
+      </div>
+      <p
+        className="text-gray-700 font-bold mt-2"
+      >
+        © 2022
+      </p>
+    </div>
+  </header>
+  <div
+    className="navbar"
+  >
+    <div
+      className="flex flex-col w-64 sidebar-wrapper"
+    >
+      <span
+        className="nav-header"
+      >
+        <h2>
+          Rent a Car
+        </h2>
+      </span>
+      <span
+        className="user-mail"
+      />
+      <div
+        className="flex-1 flex flex-col pt-3 pb-4 overflow-y-auto"
+      >
+        <div
+          className="flex items-center flex-shrink-0 px-4"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="logo"
+              className="w-40"
+              src="logo.png"
+            />
+          </a>
+        </div>
+        <nav
+          aria-label="Sidebar"
+          className="mt-12 flex-1 desktop-nav"
+        >
+          <div
+            className="pl-3 uppercase font-black text-md"
+          >
+            <a
+              aria-current="page"
+              className="bg-lime-500 text-slate-50 group flex items-center pl-5 py-3 hover:text-slate-900"
+              href="/home"
+            >
+              Cars
+            </a>
+            <a
+              className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900"
+              href="reserve"
+            >
+              Reserve
+            </a>
+            <a
+              className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900"
+              href="/reservations"
+            >
+              My reservations
+            </a>
+            <a
+              className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900"
+              href="add"
+            >
+              Add car
+            </a>
+            <a
+              className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900"
+              href="delete"
+            >
+              Delete car
+            </a>
+            <span
+              className="logout"
+            >
+              <button
+                className="logout"
+                onClick={[Function]}
+                type="button"
+              >
+                <h4>
+                  LOGOUT
+                </h4>
+              </button>
+            </span>
+          </div>
+        </nav>
+      </div>
+      <div
+        className="flex-shrink-0 flex-200 p-4"
+      >
+        <div
+          className="flex gap-2"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="social-icon"
+              className="w-6"
+              src="twitter-icon.png"
+            />
+          </a>
+          <a
+            href="/"
+          >
+            <img
+              alt="social-icon"
+              className="w-6"
+              src="facebook-icon.png"
+            />
+          </a>
+          <a
+            href="/"
+          >
+            <img
+              alt="social-icon"
+              className="w-6"
+              src="linkedin-icon.png"
+            />
+          </a>
+          <a
+            href="/"
+          >
+            <img
+              alt="social-icon"
+              className="w-6"
+              src="github-icon.png"
+            />
+          </a>
+        </div>
+        <p
+          className="text-gray-700 font-bold mt-2"
+        >
+          © 2022
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="car-reservations"
+  >
+    <div
+      className="reservation-title"
+    >
+      <h2>
+        Reservations
+      </h2>
+    </div>
+    <div
+      className="reservations-loop"
+    />
+  </div>
+</section>
+`;

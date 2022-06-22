@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Paginate component correctly 1`] = `
+<section
+  className="form-wrapper"
+>
+  <header
+    className="flex flex-col px-8  h-fit fixed top-0 w-screen shadow-xl md:hidden"
+  >
+    <a
+      className="text-lg text-slate-50"
+      href="/"
+    >
+      <img
+        alt="logo"
+        className="w-24 block"
+        src="logo.png"
+      />
+    </a>
+    <nav>
+      <div
+        className="text-slate-50 mobile-btns"
+      >
+        <button
+          className=" text-lime-500 block"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            className="h-8"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          className="hidden text-slate-900"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            className="h-8"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="hidden"
+      >
+        <ul
+          className="flex flex-col text-slate-900 font-bold text-lg gap-8 items-center mt-44"
+        >
+          <li>
+            <a
+              href="/home"
+            >
+              Cars
+            </a>
+          </li>
+          <li>
+            <a
+              href="/reserve"
+            >
+              Reserve
+            </a>
+          </li>
+          <li>
+            <a
+              href="/reservations"
+            >
+              My reservations
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Add car
+            </a>
+          </li>
+          <li>
+            <a
+              href="/delete"
+            >
+              Delete car
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      className="hidden flex flex-col items-center mt-32"
+    >
+      <div
+        className="flex gap-2"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="social-icon"
+            className="w-8"
+            src="twitter-icon.png"
+          />
+        </a>
+        <a
+          href="/"
+        >
+          <img
+            alt="social-icon"
+            className="w-8"
+            src="facebook-icon.png"
+          />
+        </a>
+        <a
+          href="/"
+        >
+          <img
+            alt="social-icon"
+            className="w-8"
+            src="linkedin-icon.png"
+          />
+        </a>
+        <a
+          href="/"
+        >
+          <img
+            alt="social-icon"
+            className="w-8"
+            src="github-icon.png"
+          />
+        </a>
+      </div>
+      <p
+        className="text-gray-700 font-bold mt-2"
+      >
+        © 2022
+      </p>
+    </div>
+  </header>
+  <div
+    className="back"
+  >
+    <a
+      aria-current={null}
+      href="/home"
+      onClick={[Function]}
+    >
+      <svg
+        baseProfile="tiny"
+        className="back-button"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        version="1.2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19.164 19.547c-1.641-2.5-3.669-3.285-6.164-3.484v1.437c0 .534-.208 1.036-.586 1.414-.756.756-2.077.751-2.823.005l-6.293-6.207c-.191-.189-.298-.444-.298-.713s.107-.524.298-.712l6.288-6.203c.754-.755 2.073-.756 2.829.001.377.378.585.88.585 1.414v1.704c4.619.933 8 4.997 8 9.796v1c0 .442-.29.832-.714.958-.095.027-.19.042-.286.042-.331 0-.646-.165-.836-.452zm-7.141-5.536c2.207.056 4.638.394 6.758 2.121-.768-3.216-3.477-5.702-6.893-6.08-.504-.056-.888-.052-.888-.052v-3.497l-5.576 5.496 5.576 5.5v-3.499l1.023.011z"
+        />
+      </svg>
+    </a>
+  </div>
+  <h3
+    className="add-reservation-title"
+  >
+    MAKE YOUR RESERVATION
+  </h3>
+  <hr
+    className="line"
+  />
+  <h5
+    className="reservation-description"
+  >
+    We pride ourselves on providing world class service, catering to a range of customer needs, with car rental deals available all year round. So whether you are looking for car rental in Montenegro on a budget, or you want to rent a luxury car for a special event.
+  </h5>
+  <form
+    className="reservation-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="reservation-flex"
+    >
+      <input
+        onChange={[Function]}
+        placeholder="pick up day"
+        required={true}
+        type="date"
+        value=""
+      />
+      <input
+        onChange={[Function]}
+        placeholder="return day"
+        required={true}
+        type="date"
+        value=""
+      />
+      <select
+        className="reservation-city"
+        id="pick-up-city"
+        name="pick-up-city"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          selected={true}
+          value=""
+        >
+          Pick up City
+        </option>
+        <option
+          value="Paris"
+        >
+          Paris
+        </option>
+        <option
+          value="London"
+        >
+          London
+        </option>
+        <option
+          value="Munich"
+        >
+          Munich
+        </option>
+        <option
+          value="Oslo"
+        >
+          Oslo
+        </option>
+        <option
+          value="Barcelona"
+        >
+          Barcelona
+        </option>
+        <option
+          value="Prague"
+        >
+          Prague
+        </option>
+        <option
+          value="Budapest"
+        >
+          Budapest
+        </option>
+        <option
+          value="Milan"
+        >
+          Milan
+        </option>
+        <option
+          value="Palermo"
+        >
+          Palermo
+        </option>
+      </select>
+      <select
+        className="return-city"
+        id="return-city"
+        name="return-city"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          selected={true}
+          value=""
+        >
+          Return City
+        </option>
+        <option
+          value="Palermo"
+        >
+          Palermo
+        </option>
+        <option
+          value="Prague"
+        >
+          Prague
+        </option>
+        <option
+          value="Budapest"
+        >
+          Budapest
+        </option>
+        <option
+          value="Milan"
+        >
+          Milan
+        </option>
+        <option
+          value="Paris"
+        >
+          Paris
+        </option>
+        <option
+          value="London"
+        >
+          London
+        </option>
+        <option
+          value="Munich"
+        >
+          Munich
+        </option>
+        <option
+          value="Oslo"
+        >
+          Oslo
+        </option>
+        <option
+          value="Barcelona"
+        >
+          Barcelona
+        </option>
+      </select>
+      <select
+        className="reservation-car-name"
+        id="reservation-car-name"
+        name="reservation-car-name"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          selected={true}
+          value=""
+        >
+          Model
+        </option>
+      </select>
+    </div>
+    <div
+      className="reservation-button-container"
+    >
+      <button
+        className="add-reservation-btn"
+        type="submit"
+      >
+        Add Reservation
+      </button>
+    </div>
+  </form>
+</section>
+`;

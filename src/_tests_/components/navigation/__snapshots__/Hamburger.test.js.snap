@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Sidebar correctly 1`] = `
+<header
+  className="flex flex-col px-8  h-fit fixed top-0 w-screen shadow-xl md:hidden"
+>
+  <a
+    className="text-lg text-slate-50"
+    href="/"
+  >
+    <img
+      alt="logo"
+      className="w-24 block"
+      src="logo.png"
+    />
+  </a>
+  <nav>
+    <div
+      className="text-slate-50 mobile-btns"
+    >
+      <button
+        className=" text-lime-500 block"
+        onClick={[Function]}
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          className="h-8"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </button>
+      <button
+        className="hidden text-slate-900"
+        onClick={[Function]}
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          className="h-8"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="hidden"
+    >
+      <ul
+        className="flex flex-col text-slate-900 font-bold text-lg gap-8 items-center mt-44"
+      >
+        <li>
+          <a
+            href="/home"
+          >
+            Cars
+          </a>
+        </li>
+        <li>
+          <a
+            href="/reserve"
+          >
+            Reserve
+          </a>
+        </li>
+        <li>
+          <a
+            href="/reservations"
+          >
+            My reservations
+          </a>
+        </li>
+        <li>
+          <a
+            href="/"
+          >
+            Add car
+          </a>
+        </li>
+        <li>
+          <a
+            href="/delete"
+          >
+            Delete car
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div
+    className="hidden flex flex-col items-center mt-32"
+  >
+    <div
+      className="flex gap-2"
+    >
+      <a
+        href="/"
+      >
+        <img
+          alt="social-icon"
+          className="w-8"
+          src="twitter-icon.png"
+        />
+      </a>
+      <a
+        href="/"
+      >
+        <img
+          alt="social-icon"
+          className="w-8"
+          src="facebook-icon.png"
+        />
+      </a>
+      <a
+        href="/"
+      >
+        <img
+          alt="social-icon"
+          className="w-8"
+          src="linkedin-icon.png"
+        />
+      </a>
+      <a
+        href="/"
+      >
+        <img
+          alt="social-icon"
+          className="w-8"
+          src="github-icon.png"
+        />
+      </a>
+    </div>
+    <p
+      className="text-gray-700 font-bold mt-2"
+    >
+      © 2022
+    </p>
+  </div>
+</header>
+`;

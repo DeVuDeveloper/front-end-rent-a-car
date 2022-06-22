@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Paginate component correctly 1`] = `
+<ul>
+  <li
+    className="previous disabled"
+  >
+    <a
+      aria-disabled="true"
+      aria-label="Previous page"
+      className="previous-btn disable-btns"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      rel="prev"
+      role="button"
+      tabIndex="-1"
+    >
+      ᐊ
+    </a>
+  </li>
+  <li
+    className="next"
+  >
+    <a
+      aria-disabled="false"
+      aria-label="Next page"
+      className="next-btn"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      rel="next"
+      role="button"
+      tabIndex="0"
+    >
+      ᐅ
+    </a>
+  </li>
+</ul>
+`;

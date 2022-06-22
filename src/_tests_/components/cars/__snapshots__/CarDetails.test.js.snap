@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CarDetails component correctly 1`] = `
+<section
+  className="show_container"
+>
+  <div
+    className="show_img"
+  >
+    <div
+      className="img_div"
+    >
+      <img
+        alt="Car"
+      />
+    </div>
+  </div>
+  <div
+    className="show_content"
+  >
+    <div
+      className="show_header"
+    >
+      <h2 />
+      <p>
+        -$200 deposit upon any Rental Purchase!
+      </p>
+    </div>
+    <div
+      className="show_details"
+    >
+      <div
+        className="car_details"
+      >
+        <p
+          className="details"
+        />
+      </div>
+      <div
+        className="car_detail"
+      >
+        <p
+          className="details"
+        >
+          Rent daily cost
+        </p>
+        <p
+          className="details"
+        >
+          $
+        </p>
+      </div>
+      <div
+        className="car_details"
+      >
+        <p
+          className="details"
+        >
+          Car type
+        </p>
+        <p
+          className="details"
+        />
+      </div>
+      <div
+        className="car_detail"
+      >
+        <p
+          className="details"
+        >
+          Transmission
+        </p>
+        <p
+          className="details"
+        />
+      </div>
+      <div
+        className="show_discount"
+      >
+        <p>
+          <span
+            className="dis_amt"
+          >
+            NaN
+            % APR
+          </span>
+          <span
+            className="dis_text"
+          >
+            representative
+          </span>
+        </p>
+      </div>
+    </div>
+    <div
+      className="more_cars"
+    >
+      <a
+        aria-current={null}
+        className="d_flex"
+        href="/home"
+        onClick={[Function]}
+      >
+        <span
+          className="discover"
+        >
+          DISCOVER MORE CARS
+        </span>
+        <svg
+          className="success"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": 40,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M16 12l-6 6V6z"
+            />
+          </g>
+        </svg>
+      </a>
+    </div>
+    <a
+      aria-current={null}
+      className="btn_container"
+      href="/add_reservations/undefined"
+      onClick={[Function]}
+    >
+      <button
+        className="btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          Reserve
+        </span>
+         
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": 30,
+            }
+          }
+          viewBox="0 0 20 20"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+            fillRule="evenodd"
+          />
+          <path
+            clipRule="evenodd"
+            d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </button>
+    </a>
+  </div>
+</section>
+`;

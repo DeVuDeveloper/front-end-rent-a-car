@@ -1,0 +1,218 @@
+@import url('http://fonts.cdnfonts.com/css/cocogoose');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap');
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-wrapper {
+  height: 100vh;
+  background-image:
+    linear-gradient(rgb(152, 192, 42) 0.8%, rgba(0, 0, 0, 0.8)),
+    url(https://www.cnet.com/a/img/resize/b5bad9fc09bf6d76cf8b5db6bca7d68fc49cdcac/2016/12/14/8ea41d9d-2a76-4f35-9d9d-1ef472f7d9dc/car-photography-how-to.jpg?auto=webp&fit=crop&height=675&width=1200);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.back {
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.add-reservation-title {
+  font-size: 29px;
+  font-family: 'Cocogoose', sans-serif;
+  letter-spacing: 10px;
+  color: #fff;
+  text-align: center;
+  padding-top: 27vh;
+}
+
+.line {
+  border: 2px solid rgb(152, 192, 42);
+  border-radius: 5px;
+  width: 60%;
+  margin: auto;
+}
+
+.reservation-description {
+  font-size: 21px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  color: rgb(212, 203, 203);
+  text-align: center;
+  margin-top: 30px;
+  padding: 0 150px;
+}
+
+.reservation-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: 10vh;
+  gap: 10px;
+}
+
+.reservation-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type='date'] {
+  background: rgb(152, 192, 42);
+  color: rgb(223, 213, 213);
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 800;
+  font-family: 'Lato', sans-serif;
+  border: 3px solid rgb(177, 171, 171);
+  padding: 12px 20px;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+}
+
+input[type='date']:focus {
+  background-size:
+    5px 5px,
+    5px 5px,
+    1.5em 1.5em;
+  background-repeat: no-repeat;
+  border-color: rgb(149, 201, 8);
+  outline: 0;
+}
+
+select {
+  background: rgb(152, 192, 42);
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 50px;
+  border: 3px solid rgb(177, 171, 171);
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    radial-gradient(#ddd 70%, transparent 72%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 0.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1.5em 1.5em;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  font-weight: 600;
+}
+
+select:focus {
+  background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    radial-gradient(gray 70%, transparent 72%);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 0.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1.5em 1.5em;
+  background-repeat: no-repeat;
+  border-color: rgb(149, 201, 8);
+  outline: 0;
+}
+
+.reservation-button-container {
+  justify-self: center;
+  margin-top: 30px;
+}
+
+.add-reservation-btn {
+  background: #fff;
+  color: rgb(152, 192, 42);
+  border-radius: 30px;
+  border: none;
+  padding: 12px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+@media screen and (max-width: 1025px) {
+  .add-reservation-title {
+    font-size: 27px;
+    font-family: 'Cocogoose', sans-serif;
+    letter-spacing: 5px;
+    color: #fff;
+    text-align: center;
+    padding-top: 17vh;
+  }
+
+  .reservation-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reservations-text h3 {
+    font-size: 22px;
+  }
+
+  .reservations-text h5 {
+    display: none;
+  }
+
+  input[type='date'] {
+    padding: 5px 15px;
+  }
+
+  select {
+    padding: 8px 57px;
+  }
+
+  .reservation-car-name {
+    padding: 8px 45px;
+  }
+
+  .add-reservation-btn {
+    background: #fff;
+    color: rgb(152, 192, 42);
+    border-radius: 30px;
+    border: none;
+    padding: 7px 29px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .back {
+    display: none;
+  }
+
+  .reservation-description {
+    display: none;
+  }
+
+  .add-reservation-title {
+    font-size: 20px;
+  }
+}

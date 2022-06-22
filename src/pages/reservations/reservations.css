@@ -1,0 +1,127 @@
+body {
+  overflow-y: scroll;
+}
+
+.my-reservations {
+  display: flex;
+}
+
+.reservation-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-title h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 34px;
+  font-weight: bolder;
+  color: rgb(78, 76, 73);
+}
+
+.reservations-loop {
+  align-self: center;
+  margin: auto;
+}
+
+.car-reservations {
+  margin: 100px auto 0 auto;
+}
+
+#cars {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  transition: 0.3s;
+}
+
+#cars td,
+#cars th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#cars tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#cars tr:hover {
+  background-color: #ddd;
+}
+
+#cars th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+.reservation-button {
+  margin-left: 90%;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+}
+
+/* @media screen and (max-width: 800px) {
+  .car-reservations {
+    margin: 100px auto 0 auto;
+  }
+} */
+
+@media screen and (max-width: 800px) {
+  .car-reservations {
+    margin: 100px 7px 0 7px;
+  }
+
+  #cars {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    transition: 0.3s;
+    padding: 0 15px;
+  }
+
+  #cars td,
+  #cars th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 2.3vw;
+    font-weight: bolder;
+  }
+
+  #cars tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  #cars tr:hover {
+    background-color: #ddd;
+  }
+
+  #cars th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04aa6d;
+    color: white;
+  }
+
+  .reservation-button {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-left: 86%;
+  }
+
+  .reservation-title h2 {
+    font-size: 24px;
+    margin-top: -30px;
+  }
+}

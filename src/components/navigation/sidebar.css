@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+.sidebar-wrapper {
+  border-right: 2px solid rgb(214, 204, 204);
+}
+
+.nav-header {
+  padding-top: 100px;
+  text-decoration: underline;
+  margin-left: 27px;
+  font-family: 'Kaushan Script', sans-serif;
+  transform: rotate(-20deg);
+}
+
+.nav-header h2 {
+  font-weight: 900;
+  font-size: 35px;
+  margin-bottom: 150px;
+}
+
+.user-mail {
+  padding: 0 20px;
+  font-family: 'Kaushan Script', sans-serif;
+  font-size: 15px;
+}
+
+.logout h4 {
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 20px 20px;
+  margin: 0;
+}
+
+.logout:hover {
+  background-color: rgb(220, 238, 157);
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+.nav-column p {
+  padding: 20px 0 0 0;
+}
+
+.nav-column a {
+  padding-left: 20px;
+}
+
+.nav-column a:hover {
+  background-color: rgb(220, 238, 157);
+}
+
+.active {
+  background-color: rgb(152, 192, 42);
+}

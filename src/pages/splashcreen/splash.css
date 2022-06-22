@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(189, 192, 191);
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.splash-title-container {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgb(152, 192, 42);
+  opacity: 0.9;
+  z-index: 1;
+  align-self: center;
+  transition: 0.5s;
+  top: 10vw;
+}
+
+.splash-title {
+  width: 130%;
+  height: 50%;
+  position: absolute;
+  left: -25px;
+  z-index: -1;
+  opacity: 0.9;
+  text-align: center;
+  top: 3vh;
+  font-family: 'Damion', sans-serif;
+  color: rgb(231, 225, 225);
+}
+
+.splash-title h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.enter {
+  display: flex;
+  margin: 34vh 0 0 0;
+  gap: 10vw;
+  justify-content: center;
+}
+
+.login-btn {
+  background-color: rgb(152, 192, 42);
+  border: none;
+  border-radius: 20px;
+  color: rgb(252, 252, 249);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+}
+
+.login-btn:hover {
+  background-color: rgb(34, 33, 32);
+  color: #fff;
+}
+
+.login-btn h3 {
+  color: rgb(244, 245, 241);
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+.login-btn h3:hover {
+  color: rgb(152, 192, 42);
+}
+
+.splash-img {
+  width: 97%;
+  height: 90%;
+  margin-left: 20px;
+  transform: rotate(15deg);
+}
+
+@media screen and (min-width: 690px) {
+  .splash-screen {
+    height: 100vh;
+  }
+
+  .splash-title-container {
+    width: 160px;
+    height: 160px;
+    top: 3vw;
+  }
+
+  .splash-title {
+    top: 5.5vh;
+  }
+
+  .splash-title h2 {
+    font-size: 44px;
+  }
+
+  .enter {
+    gap: 45vw;
+  }
+
+  .sign-up-btn {
+    padding: 3px 17px;
+  }
+
+  .login-btn {
+    padding: 3px 40px;
+  }
+}
