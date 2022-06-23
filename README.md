@@ -20,16 +20,12 @@
 <a href="https://github.com/Gegardus/book-a-car-frontend#readme"><strong>Explore the docs »</strong></a>
 <br />
 <br />
+ <a href="https://frontend-rent-a-car.herokuapp.com/">View Demo</a>
 .
 <a href="https://github.com/Gegardus/book-a-car-frontend/issues">Report Bug</a>
 ·
 <a href="https://github.com/Gegardus/book-a-car-frontend/issues">Request Feature</a>
 
-## Live Link
-
-<a href="https://rent-car-service.netlify.app">Go to Live</a>
-
-  </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
