@@ -10,7 +10,7 @@ import Reservations from './pages/reservations/Reservations';
 import AddCar from './components/cars/AddCar';
 import DeleteCar from './pages/DeletePage/DeleteCar';
 import withAuth from './components/auth/withAuth';
-import CarDetailsPage from './pages/CarDetails/CarDetailsPage';
+import CarInfo from './pages/CarDetails/CarInfo';
 import './App.css';
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
           <Route path="/reservations" component={withAuth(Reservations)} />
           <Route path="/add_car" component={withAuth(AddCar)} />
           <Route path="/delete" component={withAuth(DeleteCar)} />
-          <Route path="/CarDetails/:Id" component={withAuth(CarDetailsPage)} />
+          <Route path="/CarDetails/:Id" component={withAuth(CarInfo)} />
         </Switch>
       </Router>
     </div>
