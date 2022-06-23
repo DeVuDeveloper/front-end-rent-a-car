@@ -1,37 +1,30 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import OneCarDelete from './OneCarDelete';
 import Sidebar from '../../components/navigation/Sidebar';
 import Hamburger from '../../components/navigation/Hamburger';
-import { removeCarFromAPI } from '../../redux/reducers/cars';
-import './delete.css';
 
 const DeleteCar = () => {
-  const cars = useSelector((state) => state.cars);
-  const dispatch = useDispatch();
-  const handleDelete = (id) => {
-    dispatch(removeCarFromAPI(id));
-    window.location.reload();
-  };
-
+  const carsArr = useSelector((state) => state.cars);
   return (
-    <section className="Delete-page">
-      <Hamburger />
+    <section className="delete-car-wrapper">
+      <Hamburger pageWrapId="page-wrap" outerContainerId="outer-container" />
       <div className="navbar">
         <Sidebar />
       </div>
-      <div className="delete-container">
-        {cars.map((car) => (
-          <div key={car.id} className="contain">
-            <img className="img" src={car.carImg} alt="delete" />
-            <div className="model">{car.carModel}</div>
-            <button className="delete-btn" onClick={() => handleDelete(car.id)} type="button">
-              Delete
-            </button>
-          </div>
+      <div className="car-loop">
+        {carsArr.map((car) => (
+          <OneCarDelete
+            car={car}
+            key={car.id}
+            carPhoto={car.carImg}
+            carModel={car.carModel}
+            id={car.id}
+          />
         ))}
       </div>
     </section>
   );
 };
-
 export default DeleteCar;
+

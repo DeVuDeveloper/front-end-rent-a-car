@@ -12,14 +12,14 @@ import './singlecar.css';
 const SingleCar = ({
   id, carModel, carDescription, carPhoto,
 }) => (
-  <div className="rocket" id={id}>
+  <div className="car-home" id={id}>
     <div className="img-container">
       <Link to={`/CarDetails/${id}`}>
         <img src={carPhoto} alt="" className="one-image" />
       </Link>
       <div className="img-circle" />
     </div>
-    <div className="column">
+    <div className="car-model">
       <h2 className="car-name">{carModel}</h2>
 
       <hr />
