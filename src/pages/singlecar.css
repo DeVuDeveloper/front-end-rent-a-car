@@ -19,7 +19,7 @@
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background-color: rgb(203, 214, 164);
+  background-color: rgb(189, 199, 176);
   align-self: center;
   margin-left: -40px;
   background-size: cover;
@@ -28,7 +28,7 @@
 }
 
 .img-container:hover {
-  background-color: rgb(241, 180, 66);
+  background-color: rgb(152, 192, 42);
   opacity: 0.8;
 }
 
