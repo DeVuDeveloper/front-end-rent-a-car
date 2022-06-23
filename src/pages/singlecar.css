@@ -16,30 +16,28 @@
 }
 
 .img-container {
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  position: relative;
-  background-color: rgb(187, 236, 217);
-  opacity: 0.9;
+  background-color: rgb(203, 214, 164);
   z-index: 1;
   align-self: center;
-  transition: 0.5s;
+  margin-left: -21px;
+  opacity: 0.9;
 }
 
 .img-container:hover {
-  background-color: rgb(235, 138, 74);
-  transform: translateY(-10px);
+  background-color: rgb(241, 180, 66);
 }
 
 .one-image {
-  width: 150%;
-  height: 50%;
+  width: 65%;
+  height: 30%;
   position: absolute;
-  margin-top: 38px;
-  left: -15px;
   z-index: -1;
-  opacity: 0.9;
+  top: 5%;
+  left: -19%;
+  opacity: 1;
 }
 
 hr {
@@ -49,7 +47,6 @@ hr {
   color: rgb(27, 26, 26);
   background-color: rgb(240, 235, 235);
   margin: 10px auto 20px auto;
-
 }
 
 .description {

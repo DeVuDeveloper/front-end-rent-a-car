@@ -9,16 +9,15 @@ import {
 import { Link } from 'react-router-dom';
 import './singlecar.css';
 
-const SingleCar = ({
-  id, carModel, carDescription, carPhoto,
-}) => (
+const SingleCar = ({ id, carModel, carDescription, carPhoto }) => (
   <div className="car-home" id={id}>
-    <div className="img-container">
-      <Link to={`/CarDetails/${id}`}>
+    <Link to={`/CarDetails/${id}`}>
+      <div className="img-container">
         <img src={carPhoto} alt="" className="one-image" />
-      </Link>
-      <div className="img-circle" />
-    </div>
+
+        <div className="img-circle" />
+      </div>
+    </Link>
     <div className="car-model">
       <h2 className="car-name">{carModel}</h2>
 
@@ -34,7 +33,11 @@ const SingleCar = ({
       <a className="github" target="_blank" href="https://github.com/VuDej">
         <TiSocialGithubCircular size="2em" />
       </a>
-      <a className="linkedin" target="_blank" href="https://www.linkedin.com/in/dejan-vujovic/">
+      <a
+        className="linkedin"
+        target="_blank"
+        href="https://www.linkedin.com/in/dejan-vujovic/"
+      >
         <TiSocialLinkedinCircular size="2em" />
       </a>
     </div>
