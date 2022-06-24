@@ -7,7 +7,7 @@
     <img src="./src/img/RentACar.gif" alt="Logo" width="200" height="150">
   </a>
 
-  <h1 align="center">Rent A  Car</h1>
+  <h1 align="center">Rent A  Car Reac-Rails</h1>
 
   <p align="center">
     A car rental website
