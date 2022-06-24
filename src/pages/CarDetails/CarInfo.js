@@ -37,7 +37,7 @@ const CarDetails = () => {
       <div className="navbar">
         <Sidebar />
       </div>
-      <div className="car-info" id={carId}>
+      <div className="car-info">
         <div className="car-image">
           <img className="car-photo" src={car.photo} alt="" />
         </div>

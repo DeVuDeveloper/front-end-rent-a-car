@@ -14,8 +14,6 @@ const SingleCar = ({ id, carModel, carDescription, carPhoto }) => (
     <Link to={`/CarDetails/${id}`}>
       <div className="img-container">
         <img src={carPhoto} alt="" className="one-image" />
-
-        <div className="img-circle" />
       </div>
     </Link>
     <div className="car-model">

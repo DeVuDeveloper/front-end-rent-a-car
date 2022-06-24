@@ -55,7 +55,7 @@ const AddCar = () => {
     <section className="form-wrapper">
       <Hamburger />
       <div className="back">
-        <NavLink to="/home" exact="true">
+        <NavLink to="/home">
           <TiArrowBackOutline className="back-button" />
         </NavLink>
       </div>

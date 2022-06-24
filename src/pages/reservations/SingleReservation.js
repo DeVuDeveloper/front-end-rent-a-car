@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteReservationFromApi } from '../../redux/reducers/reservations/reservations';
 import DaysOfRental from './Count';
 
 const SingleReservation = (props) => {
-  const { reservation } = props;
+  const { reservation, currentUser } = props;
   const dispatch = useDispatch();
   const cars = useSelector((state) => state.cars);
   const totalPriceOfRental = (id) => {
@@ -29,21 +28,10 @@ const SingleReservation = (props) => {
     return carModel;
   };
 
-  const [name, setName] = useState('');
-  useEffect(() => {
-    Axios.get('http://localhost:3001/current_user', {
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: localStorage.getItem('token'),
-      },
-    }).then((response) => {
-      setName(response.data.name);
-    });
-  }, []);
-
   return (
     <section className="reservation">
       <table id="cars">
+      <tbody>
         <tr>
           <th>Car</th>
           <th>User</th>
@@ -54,9 +42,11 @@ const SingleReservation = (props) => {
           <th>Total Days</th>
           <th>Total Price</th>
         </tr>
+        </tbody>
+        <tbody>
         <tr>
           <td>{getCarModel(reservation.car_id)}</td>
-          <td>{name}</td>
+          <td>{currentUser.name}</td>
           <td>{reservation.pick_up_day}</td>
           <td>{reservation.return_day}</td>
           <td>{reservation.pick_up_city}</td>
@@ -71,6 +61,7 @@ const SingleReservation = (props) => {
             }
           </td>
         </tr>
+        </tbody>
       </table>
 
       <div className="car-reserve-btn">
@@ -89,4 +80,8 @@ const SingleReservation = (props) => {
 SingleReservation.propTypes = {
   reservation: PropTypes.instanceOf(Object).isRequired,
 };
-export default SingleReservation;
+const mapStateToProps = ({ auth: { currentUser } }) => {
+  return { currentUser };
+};
+
+export default connect(mapStateToProps)(SingleReservation);
