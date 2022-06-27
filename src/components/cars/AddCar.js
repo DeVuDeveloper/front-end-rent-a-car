@@ -1,54 +1,38 @@
 /* eslint-disable camelcase */
-import { useState } from 'react';
-import { useHistory, NavLink } from 'react-router-dom';
+// import { useState } from 'react';
+import {  NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { TiArrowBackOutline } from 'react-icons/ti';
 import { checkAuth } from '../../actions/auth';
 import { addCarToAPI } from '../../redux/reducers/cars';
 import Hamburger from '../navigation/Hamburger';
-import './addCar.css';
+import './addCar.css';[0]
 
 const AddCar = () => {
-  const user = useSelector(checkAuth);
-  const [car_model, setCarModel] = useState('');
-  const [description, setCarDescription] = useState('');
-  const [car_type, setCarType] = useState('');
-  const [photo, setPhoto] = useState('');
-  const [transmission, setTransmission] = useState('');
-  const [price_per_day, setPricePerDay] = useState('');
-
   const dispatch = useDispatch();
-  const changeCarModel = (element) => setCarModel(element.target.value);
-  const changeCarDescription = (element) => setCarDescription(element.target.value);
-  const changeCarType = (element) => setCarType(element.target.value);
-  const changePhoto = (element) => setPhoto(element.target.value);
-  const ChangeTransmission = (element) => setTransmission(element.target.value);
-  const changePricePerDay = (element) => setPricePerDay(element.target.value);
-
+  const user = useSelector(checkAuth);
   const history = useHistory();
+  function formData(event) {
+    const data = new FormData();
+    data.append('car[car_model]', event.target.car_model.value);
+    data.append('car[transmission]', event.target.transmission.value);
+    data.append('car[car_type]', event.target.car_type.value);
+    data.append('car[description]', event.target.description.value);
+    data.append('car[price_per_day]', event.target.price_per_day.value);
+    data.append('car[user_id]', user.id);
+    if (event.target.image.files.length !== 0) data.append('car[image]', event.target.image.files[0]);
+   return data;
 
-  const submitCar = (e) => {
-    e.preventDefault();
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const data = formData(event);
+    console.log(data)
+    const response = await dispatch(addCarToAPI(data));
+    if (response) event.target.reset();
     history.push('/home');
     window.location.reload(true);
-    const car = {
-      user_id: user.id,
-      car_model,
-      description,
-      car_type,
-      photo,
-      transmission,
-      price_per_day,
-    };
-
-    dispatch(addCarToAPI(car));
-
-    setCarModel('');
-    setCarDescription('');
-    setPhoto('');
-    setCarType('');
-    setTransmission('');
-    setPricePerDay('');
   };
 
   return (
@@ -59,6 +43,7 @@ const AddCar = () => {
           <TiArrowBackOutline className="back-button" />
         </NavLink>
       </div>
+      
       <h3 className="add-car-title">ADD CAR</h3>
       <hr className="line" />
       <h5 className="reservation-description">
@@ -67,19 +52,19 @@ const AddCar = () => {
         whether you are looking for car rental in Montenegro on a budget, or you
         want to rent a luxury car for a special event.
       </h5>
-      <form onSubmit={submitCar} className="add-car-form">
+      <form onSubmit={(e) => handleSubmit(e)} className="add-car-form">
         <div className="add-car-columns">
           <div className="input-group1">
             <input
-              value={car_model}
-              onChange={changeCarModel}
+              name="car_model"
+              
               type="text"
               placeholder="Car Model"
               required
             />
             <input
-              value={description}
-              onChange={changeCarDescription}
+              name="description"
+              
               type="text"
               placeholder="Description"
             />
@@ -87,9 +72,7 @@ const AddCar = () => {
           <div className="input-group2">
             <select
               className="car-type"
-              value={car_type}
-              onChange={changeCarType}
-              name="car-type"
+              name="car_type"
               id="car-type"
             >
               <option value="" selected disabled hidden>
@@ -108,17 +91,16 @@ const AddCar = () => {
             </select>
 
             <input
-              value={photo}
-              onChange={changePhoto}
-              type="url"
+              type="file"
               placeholder="Car's Image"
               required
+              name="image"
+              accept="image/png, image/jpeg" 
+              id="image"
             />
 
             <select
               className="transmission"
-              value={transmission}
-              onChange={ChangeTransmission}
               name="transmisson"
               id="transmission"
             >
@@ -130,8 +112,7 @@ const AddCar = () => {
             </select>
 
             <input
-              value={price_per_day}
-              onChange={changePricePerDay}
+              name="price_per_day"
               type="number"
               placeholder="Rent Price per day"
               required

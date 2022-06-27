@@ -66,15 +66,15 @@ input[type='number'] {
   padding: 12px 20px;
 }
 
-input[type='url'] {
+input[type='file'] {
   background: rgb(152, 192, 42);
   border-radius: 30px;
-  color: #fff;
-  font-size: 17px;
+  color: rgb(241, 238, 238);
+  font-size: 14px;
   font-weight: 800;
   font-family: 'Lato', sans-serif;
   border: 3px solid rgb(177, 171, 171);
-  padding: 12px 20px;
+  padding: 12px 0 0 10px;
 }
 
 input[type='text']:focus {

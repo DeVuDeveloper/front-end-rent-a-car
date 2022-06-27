@@ -55,7 +55,7 @@ const Cars = () => {
             <SingleCar
               key={car.id}
               carModel={car.carModel}
-              carPhoto={car.carImg}
+              carImg={car.carImg}
               carDescription={car.carDescription}
               id={car.id}
             />

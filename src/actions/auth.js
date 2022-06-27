@@ -15,7 +15,7 @@ const getToken = () => {
   }
 };
 
-export const checkAuth = () => (dispatch) => fetch('https://final-capstone-back.herokuapp.com/current_user', {
+export const checkAuth = () => (dispatch) => fetch('http://localhost:3001/current_user', {
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ export const checkAuth = () => (dispatch) => fetch('https://final-capstone-back.
   return Promise.reject(dispatch({ type: NOT_AUTHENTICATED }));
 });
 
-export const signupUser = (credentials) => (dispatch) => fetch('https://final-capstone-back.herokuapp.com/signup', {
+export const signupUser = (credentials) => (dispatch) => fetch('http://localhost:3001/signup', {
   method: 'POST',
   headers: {
     Accept: 'application/json',
@@ -50,7 +50,7 @@ export const signupUser = (credentials) => (dispatch) => fetch('https://final-ca
   });
 });
 
-export const loginUser = (user) => (dispatch) => fetch('https://final-capstone-back.herokuapp.com/login', {
+export const loginUser = (user) => (dispatch) => fetch('http://localhost:3001/login', {
   method: 'POST',
   headers: {
     Accept: 'application/json',
@@ -70,7 +70,7 @@ export const loginUser = (user) => (dispatch) => fetch('https://final-capstone-b
   });
 });
 
-export const logoutUser = () => (dispatch) => fetch('https://final-capstone-back.herokuapp.com/logout', {
+export const logoutUser = () => (dispatch) => fetch('http://localhost:3001/logout', {
   method: 'DELETE',
   headers: {
     Accept: 'application/json',
