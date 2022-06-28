@@ -26,10 +26,10 @@ const Sidebar = ({ currentUser }) => {
         <h2>Rent a Car</h2>
       </span>
 
-      <span className="user-mail">
-      <img src={currentUser.image_url} className="w-40" alt="logo" />
-        
-        </span>
+      <div className="user-photo-wrapper">
+        <img src={currentUser.image_url} className="user-photo" alt="logo" />
+        <h4>{currentUser.name}</h4>
+      </div>
           
       <div className="flex-1 flex flex-col pt-3 pb-4">
         <div className="flex items-center flex-shrink-0 px-4">

@@ -22,13 +22,11 @@ const AddCar = () => {
     data.append('car[user_id]', user.id);
     if (event.target.image.files.length !== 0) data.append('car[image]', event.target.image.files[0]);
    return data;
-
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = formData(event);
-    console.log(data)
     const response = await dispatch(addCarToAPI(data));
     if (response) event.target.reset();
     history.push('/home');
@@ -95,6 +93,7 @@ const AddCar = () => {
               placeholder="Car's Image"
               required
               name="image"
+              className="file-input-car"
               accept="image/png, image/jpeg" 
               id="image"
             />

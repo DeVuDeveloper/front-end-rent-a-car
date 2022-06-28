@@ -16,13 +16,7 @@
 .nav-header h2 {
   font-weight: 900;
   font-size: 35px;
-  margin-bottom: 150px;
-}
-
-.user-mail {
-  padding: 0 20px;
-  font-family: 'Kaushan Script', sans-serif;
-  font-size: 15px;
+  margin-bottom: 50px;
 }
 
 .logout h4 {
@@ -57,4 +51,21 @@
 
 .active {
   background-color: rgb(152, 192, 42);
+}
+
+.user-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgb(146, 142, 142);
+}
+
+.user-photo-wrapper {
+  align-self: center;
+}
+
+.user-photo-wrapper h4 {
+  font-family: 'Kaushan Script', sans-serif;
+  font-size: 19px;
+  text-align: center;
 }

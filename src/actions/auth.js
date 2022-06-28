@@ -30,13 +30,9 @@ export const checkAuth = () => (dispatch) => fetch('http://localhost:3001/curren
   return Promise.reject(dispatch({ type: NOT_AUTHENTICATED }));
 });
 
-export const signupUser = (credentials) => (dispatch) => fetch('http://localhost:3001/signup', {
+export const signupUser = (user) => (dispatch) => fetch('http://localhost:3001/signup', {
   method: 'POST',
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({ user: credentials }),
+  body: user,
 }).then((res) => {
   if (res.ok) {
     setToken(res.headers.get('Authorization'));
