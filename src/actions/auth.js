@@ -21,11 +21,11 @@ export const checkAuth = () => (dispatch) => fetch('http://localhost:3001/curren
     'Content-Type': 'application/json',
     Authorization: getToken(),
   },
-}).then((res) => {
-  if (res.ok) {
-    return res
-      .json()
-      .then((user) => dispatch({ type: AUTHENTICATED, payload: user }));
+}).then(async (data) => {
+  if (data.ok) {
+    const user = await data
+      .json();
+    return dispatch({ type: AUTHENTICATED, payload: user });
   }
   return Promise.reject(dispatch({ type: NOT_AUTHENTICATED }));
 });

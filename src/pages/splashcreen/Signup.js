@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/prefer-stateless-function */
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -52,6 +49,18 @@ const Signup = () => {
                 className="form-control"
                 placeholder="Name"
                 {...register('name', { required: true })}
+              />
+            </div>
+          </div>
+          <div className="d-flex flex-row align-items-center mb-4">
+            <i className="fas fa-envelope fa-lg me-3 fa-fw" />
+            <div className="form-outline flex-fill mb-0">
+              <input
+                type="file"
+                id="form3Example3c"
+                className="form-control"
+               
+                {...register('file', { required: true })}
               />
             </div>
           </div>
