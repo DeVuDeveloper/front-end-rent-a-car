@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { removeCarFromAPI } from '../../redux/reducers/cars';
+import { toast } from 'react-toastify';
 import './delete.css';
 
 const OneCarDelete = ({
@@ -12,6 +13,7 @@ const OneCarDelete = ({
 
   const carRemove = () => {
     dispatch(removeCarFromAPI(id));
+    toast.success('Car deleted successfully');
   };
 
   return (

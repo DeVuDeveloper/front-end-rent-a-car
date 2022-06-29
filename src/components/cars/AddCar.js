@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TiArrowBackOutline } from 'react-icons/ti';
 import { checkAuth } from '../../actions/auth';
 import { addCarToAPI } from '../../redux/reducers/cars';
+import { toast } from 'react-toastify';
 import Hamburger from '../navigation/Hamburger';
 import './addCar.css';[0]
 
@@ -29,9 +30,12 @@ const AddCar = () => {
     const data = formData(event);
     const response = await dispatch(addCarToAPI(data));
     if (response) event.target.reset();
-    history.push('/home');
-    window.location.reload(true);
-  };
+    setTimeout(() => {
+      window.location.reload(true)
+    }, 1000)
+    toast.success('Car added succesfull')
+    history.push('/home')
+  } 
 
   return (
     <section className="form-wrapper">

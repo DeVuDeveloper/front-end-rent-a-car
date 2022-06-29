@@ -3,9 +3,10 @@ import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { BiFastForwardCircle } from 'react-icons/bi';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, Form } from 'antd';
 import { signupUser } from '../../actions/auth';
+import { toast } from 'react-toastify';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
 import './login.css';
 
@@ -29,6 +30,7 @@ const Signup = () => {
     const response = await dispatch(signupUser(data));
     if (response) event.target.reset();
     history.push('/home');
+    toast.success('Signup');
     window.location.reload(true);
   };
   const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
@@ -72,7 +74,6 @@ const Signup = () => {
                 type="file"
                 id="form3Example3c"
                 className="form-control file-user"
-                placeholder="Name"
                 required
                 {...register('image', { required: true })}
               />

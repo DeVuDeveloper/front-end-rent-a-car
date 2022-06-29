@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { getCarsFromAPI } from './redux/reducers/cars';
 import Splash from './pages/splashcreen/SplashScreen';
@@ -11,6 +12,7 @@ import AddCar from './components/cars/AddCar';
 import DeleteCar from './pages/DeletePage/DeleteCar';
 import withAuth from './components/auth/withAuth';
 import CarInfo from './pages/CarDetails/CarInfo';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer />
       <Router>
         <Switch>
           <Route exact path="/" component={Splash} />

@@ -6,6 +6,7 @@ import { checkAuth } from '../../actions/auth';
 import { addReservationToAPI } from '../../redux/reducers/reservations/reservations';
 import Hamburger from '../../components/navigation/Hamburger';
 import { Formik } from 'formik';
+
 import * as Yup from 'yup';
 import './addreservation.css';
 
@@ -62,10 +63,8 @@ const AddReservation = () => {
             dispatch(addReservationToAPI(values));
             resetForm();
             setSubmitting(false);
-            setTimeout(() => {
-              history.push('/reservations');
-              window.location.reload(true);
-            }, 1400);
+            history.push('/reservations');
+            toast.success('Reservation added succesfully');
           }}
         >
           {({

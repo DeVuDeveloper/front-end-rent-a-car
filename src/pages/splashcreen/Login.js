@@ -8,6 +8,7 @@ import { BiFastForwardCircle } from 'react-icons/bi';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useHistory } from 'react-router-dom';
 import { Modal, Form } from 'antd';
+import { toast } from 'react-toastify';
 import { loginUser } from '../../actions/auth';
 import 'antd/dist/antd.css';
 import './login.css';
@@ -17,11 +18,12 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
   const onSubmit = (data) => {
-    history.push('/home');
     setTimeout(() => {
       window.location.reload(true);
-    }, 1400);
+    }, 1000);
     dispatch(loginUser(data));
+    history.push('/home');
+    toast.success('Login');
   };
   const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
     const [form] = Form.useForm();

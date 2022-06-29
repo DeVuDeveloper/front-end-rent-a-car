@@ -49,7 +49,7 @@ const Cars = () => {
           autoPlaySpeed={100}
           draggable={false}
           showDots={true}
-          ssr={true} // means to render carousel on server-side.
+          ssr={true}
         >
           {carsArr.map((car) => (
             <SingleCar
