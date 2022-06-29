@@ -79,7 +79,6 @@ const AddReservation = () => {
           }) => (
             <form onSubmit={handleSubmit} className="reservation-form">
               <div className="reservation-flex">
-
                 <input
                   name="pick_up_day"
                   onChange={handleChange}
@@ -88,7 +87,7 @@ const AddReservation = () => {
                   onBlur={handleBlur}
                   required
                 />
-               
+
                 <input
                   name="return_day"
                   onChange={handleChange}
@@ -96,7 +95,7 @@ const AddReservation = () => {
                   value={values.return_day}
                   onBlur={handleBlur}
                 />
-                
+
                 <select
                   value={values.pick_up_city}
                   name="pick_up_city"
@@ -142,17 +141,19 @@ const AddReservation = () => {
                 </select>
               </div>
               <div className="reservation-button-container">
-                <button className="add-reservation-btn" type="submit" disabled={isSubmitting}>
+                <button
+                  className="add-reservation-btn"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
                   Add Reservation
                 </button>
               </div>
               <div className="error-input">
-              
-              {touched.return_day && errors.return_day ? (
-                <div className="error-msg">{errors.return_day}</div>
+                {touched.return_day && errors.return_day ? (
+                  <div className="error-msg">{errors.return_day}</div>
                 ) : null}
-                </div>
-
+              </div>
             </form>
           )}
         </Formik>
