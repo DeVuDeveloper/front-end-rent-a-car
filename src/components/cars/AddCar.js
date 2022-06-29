@@ -55,16 +55,15 @@ const AddCar = () => {
           <div className="input-group1">
             <input
               name="car_model"
-              
               type="text"
               placeholder="Car Model"
               required
             />
             <input
               name="description"
-              
               type="text"
               placeholder="Description"
+              required
             />
           </div>
           <div className="input-group2">
@@ -72,6 +71,7 @@ const AddCar = () => {
               className="car-type"
               name="car_type"
               id="car-type"
+              required
             >
               <option value="" selected disabled hidden>
                 Car Type
@@ -91,17 +91,18 @@ const AddCar = () => {
             <input
               type="file"
               placeholder="Car's Image"
-              required
               name="image"
               className="file-input-car"
               accept="image/png, image/jpeg" 
               id="image"
+              required
             />
 
             <select
               className="transmission"
               name="transmisson"
               id="transmission"
+              required
             >
               <option value="" selected disabled hidden>
                 Car Transmission
@@ -115,6 +116,7 @@ const AddCar = () => {
               type="number"
               placeholder="Rent Price per day"
               required
+              min="20"
             />
           </div>
         </div>
