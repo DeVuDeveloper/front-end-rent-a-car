@@ -153,6 +153,16 @@ select:focus {
   color: #fff;
 }
 
+.error-msg {
+  color: rgb(230, 36, 36);
+}
+
+.error-input {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
 @media screen and (max-width: 1025px) {
   .add-reservation-title {
     font-size: 27px;

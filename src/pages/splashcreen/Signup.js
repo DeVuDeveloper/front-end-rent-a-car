@@ -59,6 +59,7 @@ const Signup = () => {
                 id="form3Example3c"
                 className="form-control"
                 placeholder="Name"
+                required
                 {...register('name', { required: true })}
               />
             </div>
@@ -72,6 +73,7 @@ const Signup = () => {
                 id="form3Example3c"
                 className="form-control file-user"
                 placeholder="Name"
+                required
                 {...register('image', { required: true })}
               />
             </div>
@@ -81,6 +83,7 @@ const Signup = () => {
             <i className="fas fa-envelope fa-lg me-3 fa-fw" />
             <div className="form-outline flex-fill mb-0">
               <input
+                required
                 type="email"
                 id="form3Example3c"
                 className="form-control"
@@ -98,6 +101,7 @@ const Signup = () => {
                 id="form3Example4c"
                 className="form-control"
                 placeholder="Password"
+                required
                 {...register('password', { required: true })}
               />
             </div>

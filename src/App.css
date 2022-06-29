@@ -50,6 +50,28 @@
   background-color: rgba(105, 104, 104, 0.553);
 }
 
+.container {
+  padding: 100px;
+}
+
+.email-input {
+  width: 300px;
+  padding: 5px 10px;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.success {
+  color: blue;
+}
+
+.error {
+  color: red;
+}
+
 @media screen and (min-width: 1024px) {
   .previous-btn {
     top: 330px;

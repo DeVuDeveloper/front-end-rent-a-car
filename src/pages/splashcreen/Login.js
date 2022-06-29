@@ -51,6 +51,7 @@ const Login = () => {
                 id="form3Example3c"
                 className="form-control"
                 placeholder="Email"
+                required
                 {...register('email', { required: true })}
               />
             </div>
@@ -64,6 +65,7 @@ const Login = () => {
                 id="form3Example4c"
                 className="form-control"
                 placeholder="Password"
+                required
                 {...register('password', { required: true })}
               />
             </div>
