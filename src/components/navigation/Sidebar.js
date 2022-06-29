@@ -98,9 +98,7 @@ const Sidebar = ({ currentUser }) => {
 };
 
 const mapStateToProps = ({ auth: { currentUser } }) => {
-  console.log(currentUser)
   return { currentUser };
-  
 };
 
 export default connect(mapStateToProps)(Sidebar);

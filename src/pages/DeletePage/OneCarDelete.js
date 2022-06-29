@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { removeCarFromAPI } from '../../redux/reducers/cars';
 import { toast } from 'react-toastify';
@@ -25,11 +24,11 @@ const OneCarDelete = ({
         <h2 className="car-delete-name">{carModel}</h2>
       </div>
       <div className="car-btn">
-        <Link to="/home">
+        
           <button type="button" onClick={carRemove} className="delete-button">
             Delete
           </button>
-        </Link>
+        
       </div>
     </section>
   );

@@ -37,7 +37,6 @@ export const getCarsFromAPI = () => async (storing) => {
   });
 
   const carsData = await result.json()
-  console.log(carsData.data)
   storing(getCars(carsData.data));
 };
 

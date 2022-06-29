@@ -53,14 +53,14 @@ export const loginUser = (user) => (dispatch) => fetch('http://localhost:3001/lo
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({ user }),
-}).then((res) => {
-  if (res.ok) {
-    setToken(res.headers.get('Authorization'));
-    return res
+}).then((response) => {
+  if (response.ok) {
+    setToken(response.headers.get('Authorization'));
+    return response
       .json()
       .then((userJson) => dispatch({ type: AUTHENTICATED, payload: userJson.data }));
   }
-  return res.json().then((errors) => {
+  return response.json().then((errors) => {
     dispatch({ type: NOT_AUTHENTICATED });
     return Promise.reject(errors);
   });

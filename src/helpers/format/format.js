@@ -1,7 +1,4 @@
-import { toast } from 'react-toastify';
-import StorageManager from './StorageManager';
-
-
+import StorageManager from '../StorageManager';
 
 export const userStatus = () => {
   const auth = StorageManager.getToken();
