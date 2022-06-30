@@ -10,6 +10,8 @@ import facebook from '../../assets/images/facebook-icon.png';
 import linkedin from '../../assets/images/linkedin-icon.png';
 import github from '../../assets/images/github-icon.png';
 import Logout from '../auth/Logout';
+import CardProfile from './CardProfile';
+
 import './sidebar.css';
 
 const social = [
@@ -29,6 +31,7 @@ const Sidebar = ({ currentUser }) => {
       <div className="user-photo-wrapper">
         <img src={currentUser.image_url} className="user-photo" alt="logo" />
         <h4>{currentUser.name}</h4>
+        <CardProfile/>
       </div>
           
       <div className="flex-1 flex flex-col pt-3 pb-4">
