@@ -66,6 +66,7 @@ export const loginUser = (user) => (dispatch) => fetch('http://localhost:3001/lo
   });
 });
 
+
 export const logoutUser = () => (dispatch) => fetch('http://localhost:3001/logout', {
   method: 'DELETE',
   headers: {

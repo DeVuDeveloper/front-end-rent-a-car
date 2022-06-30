@@ -10,7 +10,6 @@ import { useHistory } from 'react-router-dom';
 import { Modal, Form } from 'antd';
 import { toast } from 'react-toastify';
 import { loginUser } from '../../actions/auth';
-import styles from './Login.module.css';
 import 'antd/dist/antd.css';
 import './login.css';
 
@@ -19,23 +18,14 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
 
-  const [info, setMessage] = useState({ message: '', status: false });
-
   const onSubmit = (data) => {
     setTimeout(() => {
       window.location.reload(true);
     }, 1000);
-    const response = dispatch(loginUser(data));
-    if (response) {
-      history.push('/home');
-      toast.success('Login');
-    } else {
-      setMessage(response.message);
-    }
-    
+    dispatch(loginUser(data));
+    history.push('/home');
+    toast.success('Login');
   };
-
-  const { message, status } = info;
 
   const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
     const [form] = Form.useForm();
@@ -52,7 +42,6 @@ const Login = () => {
           });
         }}
       >
-        <div className={`${status === true ? styles.success : styles.failure}`}>{message}</div>
         <form
           className="mx-1 mx-md-4"
           onSubmit={handleSubmit(onSubmit)}
