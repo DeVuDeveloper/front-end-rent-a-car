@@ -69,3 +69,35 @@
   font-size: 19px;
   text-align: center;
 }
+
+.media {
+  width: 17vh;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.twitter-nav:hover {
+  color: rgb(102, 98, 98);
+}
+
+.facebook-nav:hover {
+  color: rgb(102, 98, 98);
+}
+
+.linkedin-nav:hover {
+  color: rgb(102, 98, 98);
+}
+
+.github-nav:hover {
+  color: rgb(102, 98, 98);
+}
+
+.footer-navbar {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  margin-top: 60px;
+  font-size: large;
+  font-weight: 700;
+  color: rgb(152, 192, 42);
+}
