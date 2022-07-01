@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import SingleCar from './SingleCar';
@@ -7,7 +8,7 @@ import Hamburger from '../components/navigation/Hamburger';
 import Sidebar from '../components/navigation/Sidebar';
 import './home.css';
 
-const Cars = () => {
+const Cars = ({ currentUser }) => {
   const carsArr = useSelector((state) => state.cars);
   const responsive = {
     superLargeDesktop: {
@@ -36,6 +37,10 @@ const Cars = () => {
         <Sidebar />
       </div>
       <div className="one-car-container">
+        <span className="user-data">
+          <h4>{currentUser.name}</h4>
+          <img src={currentUser.image_url} className="user-photo" alt="logo" />
+        </span>
         <header className="header-carousel">
           <h1>This is Our Models for Rent</h1>
           <h4>Please Select One Model</h4>
@@ -65,4 +70,8 @@ const Cars = () => {
     </section>
   );
 };
-export default Cars;
+const mapStateToProps = ({ auth: { currentUser } }) => {
+  return { currentUser };
+};
+
+export default connect(mapStateToProps)(Cars);

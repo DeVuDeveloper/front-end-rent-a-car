@@ -46,8 +46,7 @@
 
 .enter {
   display: flex;
-  margin: 34vh 0 0 0;
-  gap: 10vw;
+  margin: 34vh 10px;
   justify-content: center;
 }
 
@@ -110,6 +109,7 @@
 
   .sign-up-btn {
     padding: 3px 17px;
+    margin-left: 120px;
   }
 
   .login-btn {

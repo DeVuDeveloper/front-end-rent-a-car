@@ -57,9 +57,26 @@
   color: rgb(78, 7, 7);
 }
 
+.user-data {
+  display: none;
+}
+
 @media screen and (max-width: 860px) {
   .navbar {
     display: none;
+  }
+
+  .user-data {
+    display: block;
+    position: relative;
+    top: 70px;
+    margin: auto;
+  }
+
+  .user-data h4 {
+    text-align: center;
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 19px;
   }
 
   .header-carousel {

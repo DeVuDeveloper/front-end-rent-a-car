@@ -15,7 +15,7 @@ export const createCar = (payload) => ({
 });
 
 export const addCarToAPI = (car) => async (adding) => {
-  const response = await fetch('http://localhost:3001/api/v1/cars', {
+  const response = await fetch('https://backend-dejan-rentacar.herokuapp.com/api/v1/cars', {
     method: 'POST',
     body: car,
     headers: {
@@ -29,7 +29,7 @@ export const addCarToAPI = (car) => async (adding) => {
 };
 
 export const getCarsFromAPI = () => async (storing) => {
-  const result = await fetch('http://localhost:3001/api/v1/cars', {
+  const result = await fetch('https://backend-dejan-rentacar.herokuapp.com/api/v1/cars', {
     headers: {
       'Content-Type': 'application/json',
       Authorization: localStorage.getItem('token'),
@@ -46,7 +46,7 @@ export const removeCar = (payload) => ({
 });
 
 export const removeCarFromAPI = (id) => async (dispatch) => (
-  fetch(`http://localhost:3001/api/v1/cars/${id}`, {
+  fetch(`https://backend-dejan-rentacar.herokuapp.com/api/v1/cars/${id}`, {
     headers: {
       'Content-Type': 'application/json',
       Authorization: localStorage.getItem('token'),

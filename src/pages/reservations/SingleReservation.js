@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
+import StripeCheckout from "react-stripe-checkout";
+import { toast } from "react-toastify";
 import { deleteReservationFromApi } from '../../redux/reducers/reservations/reservations';
 import DaysOfRental from './Count';
+import './singlereservations.css'
 
 const SingleReservation = (props) => {
   const { reservation, currentUser } = props;
@@ -27,6 +30,11 @@ const SingleReservation = (props) => {
     });
     return carModel;
   };
+
+  async function handleToken(token, addresses) {
+    toast("Success! Check email for details")
+    console.log(token ,addresses)
+  }
 
   return (
     <section className="reservation">
@@ -65,6 +73,14 @@ const SingleReservation = (props) => {
       </table>
 
       <div className="car-reserve-btn">
+      <StripeCheckout
+        stripeKey="pk_test_51KUvSuDpj7jTYWWqkzXo7N1iH3trRhi8h3v4OZSCz4fzAOdaEtnedPkpE74nPto8tEehF9eyQPqB4erTuC0nquUS0082etO4HX"
+        token={handleToken}
+        amount={totalPriceOfRental(reservation.car_id) * 100}
+        name={getCarModel(reservation.car_id)}
+        billingAddress
+        shippingAddress
+      />
         <button
           type="button"
           className="btn btn-outline-danger reservation-button"
