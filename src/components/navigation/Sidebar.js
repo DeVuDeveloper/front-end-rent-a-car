@@ -6,22 +6,15 @@ import { NavLink, useHistory } from 'react-router-dom';
 import { connect, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import logo from '../../assets/images/logo.png';
-import twitter from '../../assets/images/twitter-icon.png';
-import facebook from '../../assets/images/facebook-icon.png';
-import linkedin from '../../assets/images/linkedin-icon.png';
+import {
+  FaTwitter, FaFacebookF, FaGithub, FaLinkedin,
+} from 'react-icons/fa';
 import github from '../../assets/images/github-icon.png';
 import Logout from '../auth/Logout';
 import { AUTHENTICATED, NOT_AUTHENTICATED } from '../../actions/index';
 import { toast } from 'react-toastify';
 
 import './sidebar.css';
-
-const social = [
-  { icon: twitter },
-  { icon: facebook },
-  { icon: linkedin },
-  { icon: github },
-];
 
 const Sidebar = ({ currentUser }) => {
   const dispatch = useDispatch();
@@ -151,15 +144,41 @@ const Sidebar = ({ currentUser }) => {
           </div>
         </nav>
       </div>
-      <div className="flex-shrink-0 flex-200 p-4">
-        <div className="flex gap-2">
-          {social.map((item) => (
-            <a href="/home" key={item.icon}>
-              <img src={item.icon} alt="social-icon" className="w-6" />
-            </a>
-          ))}
+      <div className="social">
+        <div className="media">
+          <a
+            className="twitter-nav"
+            target="_blank"
+            href="https://twitter.com/home"
+          >
+            <FaTwitter />
+          </a>
+          <a
+            className="facebook-nav"
+            target="_blank"
+            href="https://www.facebook.com/"
+          >
+            <FaFacebookF />
+          </a>
+          <a
+            className="github-nav"
+            target="_blank"
+            href="https://github.com/VuDej"
+          >
+            <FaGithub />
+          </a>
+          <a
+            className="linkedin-nav"
+            target="_blank"
+            href="https://www.linkedin.com/in/dejan-vujovic/"
+          >
+            <FaLinkedin />
+          </a>
         </div>
-        <p className="text-gray-700 font-bold mt-2">©Vujovic Dejan 2022</p>
+        <div className="footer-navbar">
+          <p>© 2022 Dejan Rent a Car</p>
+        </div>
+
       </div>
     </div>
   );
