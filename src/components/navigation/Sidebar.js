@@ -2,15 +2,17 @@
 /* eslint-disable no-confusing-arrow */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { NavLink, useHistory } from 'react-router-dom';
+import { connect, useDispatch } from 'react-redux';
+import { useForm } from 'react-hook-form';
 import logo from '../../assets/images/logo.png';
 import twitter from '../../assets/images/twitter-icon.png';
 import facebook from '../../assets/images/facebook-icon.png';
 import linkedin from '../../assets/images/linkedin-icon.png';
 import github from '../../assets/images/github-icon.png';
 import Logout from '../auth/Logout';
-import CardProfile from './CardProfile';
+import { AUTHENTICATED, NOT_AUTHENTICATED } from '../../actions/index';
+import { toast } from 'react-toastify';
 
 import './sidebar.css';
 
@@ -22,18 +24,76 @@ const social = [
 ];
 
 const Sidebar = ({ currentUser }) => {
+  const dispatch = useDispatch();
+  const { register } = useForm();
+  const history = useHistory();
+  const getToken = () => {
+    const now = new Date(Date.now()).getTime();
+    const thirtyMinutes = 1000 * 60 * 30;
+    const timeSinceLastLogin = now - localStorage.getItem('lastLoginTime');
+    if (timeSinceLastLogin < thirtyMinutes) {
+      return localStorage.getItem('token');
+    }
+  };
+
+  const record_id = currentUser.image.record.id
+
+  const updateUser = (user) => (dispatch) =>
+  fetch(`http://localhost:3001/current_user/${record_id})`, {
+    method: 'PATCH',
+    body: user,
+    headers: {
+      
+      Authorization: getToken(),
+    },
+  }).then(async (data) => {
+    if (data.ok) {
+      const user = await data.json();
+      return dispatch({ type: AUTHENTICATED, payload: user });
+    }
+    return Promise.reject(dispatch({ type: NOT_AUTHENTICATED }));
+  });
+
+  function formData(event) {
+    const data = new FormData();
+    if (event.target.image.files.length !== 0)
+      data.append('user[image]', event.target.image.files[0]);
+    return data;
+  }
+
+  const OnSubmit = async (event) => {
+    event.preventDefault();
+    const data = formData(event);
+    const response = await dispatch(updateUser(data));
+    if (response) event.target.reset();
+    toast.success('Updating image');
+  };
+
   return (
     <div className="flex flex-col w-64 sidebar-wrapper">
       <span className="nav-header">
         <h2>Rent a Car</h2>
       </span>
 
-      <div className="user-photo-wrapper">
-        <img src={currentUser.image_url} className="user-photo" alt="logo" />
+    <div>
+      <form className="form-img" onSubmit={(e) => OnSubmit(e)} method="post">
+        <small>
         <h4>{currentUser.name}</h4>
-        <CardProfile/>
+          <label htmlFor="file-input">
+            <img src={currentUser.image_url} className="user-photo" alt="logo" />
+          </label>
+        <input type="file" id="file-input" accept=".jpg,.jpeg,.png" style={{ display: 'none' }} 
+          {...register('image', { required: true })}
+        />
+       </small>
+     <span className="update-img">
+        <button type="submit">
+        update image
+        </button>
+      </span>
+      </form>
       </div>
-          
+
       <div className="flex-1 flex flex-col pt-3 pb-4">
         <div className="flex items-center flex-shrink-0 px-4">
           <a href="/">
@@ -64,7 +124,9 @@ const Sidebar = ({ currentUser }) => {
               {currentUser.role === 'admin' && (
                 <NavLink
                   to="/add_car"
-                  className={({ isActive }) => isActive ? 'active' : 'inactive'}
+                  className={({ isActive }) =>
+                    isActive ? 'active' : 'inactive'
+                  }
                 >
                   <p>ADD CAR</p>
                 </NavLink>
@@ -73,7 +135,9 @@ const Sidebar = ({ currentUser }) => {
               {currentUser.role === 'admin' && (
                 <NavLink
                   to="/delete"
-                  className={({ isActive }) => isActive ? 'active' : 'inactive'}
+                  className={({ isActive }) =>
+                    isActive ? 'active' : 'inactive'
+                  }
                 >
                   <p>DELETE CAR</p>
                 </NavLink>

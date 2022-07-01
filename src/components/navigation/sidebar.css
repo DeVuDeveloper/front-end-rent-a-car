@@ -60,12 +60,34 @@
   border: 2px solid rgb(146, 142, 142);
 }
 
-.user-photo-wrapper {
-  align-self: center;
+.img-update {
+  display: flex;
 }
 
-.user-photo-wrapper h4 {
+.form-img {
+  text-align: center;
+  align-self: center;
+  margin: auto;
+  color: rgb(97, 93, 93);
+  width: 40%;
+}
+
+.form-img h4 {
+  text-align: center;
   font-family: 'Kaushan Script', sans-serif;
   font-size: 19px;
-  text-align: center;
+}
+
+.file-img {
+  color: rgb(97, 93, 93);
+}
+
+.image-upload > input {
+  display: none;
+}
+
+.update-img {
+  padding: 2px 5px;
+  background-color: rgb(152, 192, 42);
+  color: #fff;
 }
