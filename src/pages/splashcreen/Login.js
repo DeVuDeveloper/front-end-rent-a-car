@@ -23,18 +23,9 @@ const Login = ({ authChecked }) => {
     setTimeout(() => {
       window.location.reload(true)
     }, 1700)
-    if (authChecked) {
-      toast.error('Invalid email or password');
-    } else if (authChecked = false) {
-      toast.error('Invalid email or password');
-    }else {
+      dispatch(loginUser(data));
       toast.success('Login');
       history.push('/home');
-      dispatch(loginUser(data));
-      setTimeout(() => {
-        window.location.reload(true)
-      }, 1700)
-    }
   };
 
   const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {

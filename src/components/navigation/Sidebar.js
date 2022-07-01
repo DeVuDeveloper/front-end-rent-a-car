@@ -63,10 +63,13 @@ const Sidebar = ({ currentUser }) => {
 
   const OnSubmit = async (event) => {
     event.preventDefault();
+    if (event.target.image.files.length !== 0) {
     const data = formData(event);
     const response = await dispatch(updateUser(data));
     if (response) event.target.reset();
+    history.push('./home')
     toast.success('Updating image');
+    }
   };
 
   return (
@@ -76,7 +79,7 @@ const Sidebar = ({ currentUser }) => {
       </span>
 
     <div>
-      <form className="form-img" onSubmit={(e) => OnSubmit(e)} method="post">
+      <form className="form-img" onSubmit={(e) => OnSubmit(e)} method="patch">
         <small>
         <h4>{currentUser.name}</h4>
           <label htmlFor="file-input">
@@ -96,9 +99,7 @@ const Sidebar = ({ currentUser }) => {
 
       <div className="flex-1 flex flex-col pt-3 pb-4">
         <div className="flex items-center flex-shrink-0 px-4">
-          <a href="/">
-            <img src={logo} className="w-40" alt="logo" />
-          </a>
+          <img src={logo} className="w-40" alt="logo" />
         </div>
         <nav className="mt-12 flex-1 desktop-nav" aria-label="Sidebar">
           <div className="pl-3 uppercase font-black text-md">

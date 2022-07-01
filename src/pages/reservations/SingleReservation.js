@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 import StripeCheckout from "react-stripe-checkout";
-import axios from "axios";
 import { toast } from "react-toastify";
 import { deleteReservationFromApi } from '../../redux/reducers/reservations/reservations';
 import DaysOfRental from './Count';
