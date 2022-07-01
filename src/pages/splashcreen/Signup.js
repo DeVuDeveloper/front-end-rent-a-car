@@ -72,7 +72,6 @@ const Signup = () => {
             <div className="form-outline flex-fill mb-0">
               <input
                 type="file"
-                id="form3Example3c"
                 className="form-control file-user"
                 required
                 {...register('image', { required: true })}
@@ -86,7 +85,6 @@ const Signup = () => {
               <input
                 required
                 type="email"
-                id="form3Example3c"
                 className="form-control"
                 placeholder="Email"
                 {...register('email', { required: true })}
@@ -99,7 +97,6 @@ const Signup = () => {
             <div className="form-outline flex-fill mb-0">
               <input
                 type="password"
-                id="form3Example4c"
                 className="form-control"
                 placeholder="Password"
                 required
