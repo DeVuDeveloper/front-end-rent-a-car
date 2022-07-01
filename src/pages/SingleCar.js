@@ -9,11 +9,11 @@ import {
 import { Link } from 'react-router-dom';
 import './singlecar.css';
 
-const SingleCar = ({ id, carModel, carDescription, carPhoto }) => (
+const SingleCar = ({ id, carModel, carDescription, carImg }) => (
   <div className="car-home" id={id}>
     <Link to={`/CarDetails/${id}`}>
       <div className="img-container">
-        <img src={carPhoto} alt="" className="one-image" />
+        <img src={carImg} alt="" className="one-image" />
       </div>
     </Link>
     <div className="car-model">
@@ -46,7 +46,7 @@ SingleCar.propTypes = {
   id: PropTypes.number.isRequired,
   carModel: PropTypes.string.isRequired,
   carDescription: PropTypes.string.isRequired,
-  carPhoto: PropTypes.string.isRequired,
+  carImg: PropTypes.string.isRequired,
 };
 
 export default SingleCar;

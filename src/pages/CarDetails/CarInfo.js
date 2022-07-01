@@ -12,7 +12,7 @@ const CarDetails = () => {
   const { Id } = useParams();
   const [car, setCar] = useState({});
   const fetchCar = async () => {
-    const res = await fetch(`https://final-capstone-back.herokuapp.com/api/v1/cars/${Id}`, {
+    const res = await fetch(`http://localhost:3001/api/v1/cars/${Id}`, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: localStorage.getItem('token'),
@@ -39,7 +39,7 @@ const CarDetails = () => {
       </div>
       <div className="car-info">
         <div className="car-image">
-          <img className="car-photo" src={car.photo} alt="" />
+          <img className="car-photo" src={car.image_url} alt="" />
         </div>
         <div className="info-wrapper">
           <div className="column">

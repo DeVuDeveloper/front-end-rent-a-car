@@ -15,11 +15,10 @@ export const createCar = (payload) => ({
 });
 
 export const addCarToAPI = (car) => async (adding) => {
-  const response = await fetch('https://final-capstone-back.herokuapp.com/api/v1/cars', {
+  const response = await fetch('http://localhost:3001/api/v1/cars', {
     method: 'POST',
-    body: JSON.stringify(car),
+    body: car,
     headers: {
-      'Content-Type': 'application/json',
       Authorization: localStorage.getItem('token'),
     },
   });
@@ -30,25 +29,15 @@ export const addCarToAPI = (car) => async (adding) => {
 };
 
 export const getCarsFromAPI = () => async (storing) => {
-  const result = await fetch('https://final-capstone-back.herokuapp.com/api/v1/cars', {
+  const result = await fetch('http://localhost:3001/api/v1/cars', {
     headers: {
       'Content-Type': 'application/json',
       Authorization: localStorage.getItem('token'),
     },
   });
 
-  const carsData = await result.json();
-
-  const cars = carsData.map((data) => ({
-    id: data.id,
-    carModel: data.car_model,
-    carDescription: data.description,
-    carType: data.car_type,
-    carImg: data.photo,
-    carTransmission: data.transmission,
-    rentPrice: data.price_per_day,
-  }));
-  storing(getCars(cars));
+  const carsData = await result.json()
+  storing(getCars(carsData.data));
 };
 
 export const removeCar = (payload) => ({
@@ -57,7 +46,7 @@ export const removeCar = (payload) => ({
 });
 
 export const removeCarFromAPI = (id) => async (dispatch) => (
-  fetch(`https://final-capstone-back.herokuapp.com/api/v1/cars/${id}`, {
+  fetch(`http://localhost:3001/api/v1/cars/${id}`, {
     headers: {
       'Content-Type': 'application/json',
       Authorization: localStorage.getItem('token'),
@@ -68,8 +57,6 @@ export const removeCarFromAPI = (id) => async (dispatch) => (
     .then(dispatch(removeCar(id)))
 
 );
-
-// reducer
 
 const carsReducer = (state = initialState, action) => {
   switch (action.type) {

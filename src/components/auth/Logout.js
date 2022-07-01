@@ -3,13 +3,16 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { toast } from 'react-toastify';
 import { logoutUser } from '../../actions/auth';
 
 const Logout = ({ dispatchLogoutUser }) => {
   const history = useHistory();
 
   const handleClick = () => {
-    dispatchLogoutUser().then(() => history.push('/'));
+    dispatchLogoutUser().then(() =>
+    history.push('/')),
+    toast.success('Logout')
   };
 
   return (

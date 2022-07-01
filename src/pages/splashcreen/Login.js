@@ -8,21 +8,26 @@ import { BiFastForwardCircle } from 'react-icons/bi';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useHistory } from 'react-router-dom';
 import { Modal, Form } from 'antd';
+import { toast } from 'react-toastify';
+import { connect } from 'react-redux';
 import { loginUser } from '../../actions/auth';
 import 'antd/dist/antd.css';
 import './login.css';
 
-const Login = () => {
+const Login = ({ authChecked }) => {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const history = useHistory();
+
   const onSubmit = (data) => {
-    history.push('/home');
     setTimeout(() => {
-      window.location.reload(true);
-    }, 1400);
-    dispatch(loginUser(data));
+      window.location.reload(true)
+    }, 1700)
+      dispatch(loginUser(data));
+      toast.success('Login');
+      history.push('/home');
   };
+
   const CollectionCreateForm = ({ visible, onCreate, onCancel }) => {
     const [form] = Form.useForm();
     return (
@@ -51,6 +56,7 @@ const Login = () => {
                 id="form3Example3c"
                 className="form-control"
                 placeholder="Email"
+                required
                 {...register('email', { required: true })}
               />
             </div>
@@ -64,6 +70,7 @@ const Login = () => {
                 id="form3Example4c"
                 className="form-control"
                 placeholder="Password"
+                required
                 {...register('password', { required: true })}
               />
             </div>
@@ -112,4 +119,8 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapStateToProps = ({ auth: { authChecked } }) => {
+  return { authChecked };
+};
+
+export default connect(mapStateToProps)(Login);
