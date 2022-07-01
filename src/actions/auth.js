@@ -35,14 +35,10 @@ export const checkAuth = () => (dispatch) =>
 export const signupUser = (user) => (dispatch) =>
   fetch('https://backend-dejan-rentacar.herokuapp.com/signup', {
     method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
     body: user,
   }).then((res) => {
     if (res.ok) {
-      setToken(res.headers.get('Authorization'));
+      setToken(res.get('Authorization'));
       return res
         .json()
         .then((userJson) =>
