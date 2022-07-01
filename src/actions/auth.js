@@ -16,7 +16,7 @@ const getToken = () => {
 };
 
 export const checkAuth = () => (dispatch) =>
-  fetch('http://localhost:3001/current_user', {
+  fetch('https://backend-dejan-rentacar.herokuapp.com/current_user', {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export const checkAuth = () => (dispatch) =>
 
 
 export const signupUser = (user) => (dispatch) =>
-  fetch('http://localhost:3001/signup', {
+  fetch('https://backend-dejan-rentacar.herokuapp.com/signup', {
     method: 'POST',
     body: user,
   }).then((res) => {
@@ -52,7 +52,7 @@ export const signupUser = (user) => (dispatch) =>
   });
 
 export const loginUser = (user) => (dispatch) =>
-  fetch('http://localhost:3001/login', {
+  fetch('https://backend-dejan-rentacar.herokuapp.com/login', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -75,7 +75,7 @@ export const loginUser = (user) => (dispatch) =>
   });
 
 export const logoutUser = () => (dispatch) =>
-  fetch('http://localhost:3001/logout', {
+  fetch('https://backend-dejan-rentacar.herokuapp.com/logout', {
     method: 'DELETE',
     headers: {
       Accept: 'application/json',
