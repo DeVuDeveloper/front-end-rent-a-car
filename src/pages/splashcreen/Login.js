@@ -9,12 +9,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useHistory } from 'react-router-dom';
 import { Modal, Form } from 'antd';
 import { toast } from 'react-toastify';
-import { connect } from 'react-redux';
 import { loginUser } from '../../actions/auth';
 import 'antd/dist/antd.css';
 import './login.css';
 
-const Login = ({ authChecked }) => {
+const Login = () => {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const history = useHistory();
@@ -119,8 +118,5 @@ const Login = ({ authChecked }) => {
   );
 };
 
-const mapStateToProps = ({ auth: { authChecked } }) => {
-  return { authChecked };
-};
 
-export default connect(mapStateToProps)(Login);
+export default Login;

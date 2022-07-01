@@ -9,7 +9,6 @@ import logo from '../../assets/images/logo.png';
 import {
   FaTwitter, FaFacebookF, FaGithub, FaLinkedin,
 } from 'react-icons/fa';
-import github from '../../assets/images/github-icon.png';
 import Logout from '../auth/Logout';
 import { AUTHENTICATED, NOT_AUTHENTICATED } from '../../actions/index';
 import { toast } from 'react-toastify';
