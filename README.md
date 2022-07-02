@@ -1,4 +1,4 @@
-# Rent A Car React_rails
+# Rent A Car React
 
 <div id="top"></div>
 <!-- PROJECT LOGO -->
