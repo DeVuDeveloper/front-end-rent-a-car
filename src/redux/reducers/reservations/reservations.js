@@ -1,7 +1,7 @@
 const CREATE_RESERVATION = 'reservations/CREATE_RESERVATION';
 const GET_RESERVATIONS = 'reservations/GET_RESERVATIONS';
 const DELETE_RESERVATION = 'reservation/DELETE_RESERVATION';
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'https://backend-dejan-rentacar.herokuapp.com';
 
 const initialState = [];
 

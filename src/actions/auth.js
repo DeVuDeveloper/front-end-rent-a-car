@@ -1,6 +1,6 @@
 /* eslint-disable consistent-return */
 import { AUTHENTICATED, NOT_AUTHENTICATED } from '.';
-const BASE_URL = 'http://localhost:3001/';
+const BASE_URL = 'https://backend-dejan-rentacar.herokuapp.com';
 
 const setToken = (token) => {
   localStorage.setItem('token', token);

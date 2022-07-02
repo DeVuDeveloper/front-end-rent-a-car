@@ -12,7 +12,7 @@ const CarDetails = () => {
   const { Id } = useParams();
   const [car, setCar] = useState({});
   const fetchCar = async () => {
-    const res = await fetch(`http://localhost:3001/api/v1/cars/${Id}`, {
+    const res = await fetch(`https://backend-dejan-rentacar.herokuapp.com/api/v1/cars/${Id}`, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: localStorage.getItem('token'),
