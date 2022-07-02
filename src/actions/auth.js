@@ -1,5 +1,6 @@
 /* eslint-disable consistent-return */
 import { AUTHENTICATED, NOT_AUTHENTICATED } from '.';
+const BASE_URL = 'http://localhost:3001/';
 
 const setToken = (token) => {
   localStorage.setItem('token', token);
@@ -16,7 +17,7 @@ const getToken = () => {
 };
 
 export const checkAuth = () => (dispatch) =>
-  fetch('https://backend-dejan-rentacar.herokuapp.com/current_user', {
+  fetch(`${BASE_URL}/current_user`, {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
@@ -32,13 +33,14 @@ export const checkAuth = () => (dispatch) =>
 
 
 
-export const signupUser = (user) => (dispatch) =>
-  fetch('https://backend-dejan-rentacar.herokuapp.com/signup', {
+
+  export const signupUser = (user) => (dispatch) =>
+  fetch(`${BASE_URL}/signup`, {
     method: 'POST',
     body: user,
   }).then((res) => {
     if (res.ok) {
-      setToken(res.get('Authorization'));
+      setToken(res.headers.get('Authorization'));
       return res
         .json()
         .then((userJson) =>
@@ -52,7 +54,7 @@ export const signupUser = (user) => (dispatch) =>
   });
 
 export const loginUser = (user) => (dispatch) =>
-  fetch('https://backend-dejan-rentacar.herokuapp.com/login', {
+  fetch(`${BASE_URL}/login`, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -75,7 +77,7 @@ export const loginUser = (user) => (dispatch) =>
   });
 
 export const logoutUser = () => (dispatch) =>
-  fetch('https://backend-dejan-rentacar.herokuapp.com/logout', {
+  fetch(`${BASE_URL}/logout`, {
     method: 'DELETE',
     headers: {
       Accept: 'application/json',

@@ -31,7 +31,7 @@ const Sidebar = ({ currentUser }) => {
   const record_id = currentUser.image.record.id
 
   const updateUser = (user) => (dispatch) =>
-  fetch(`https://backend-dejan-rentacar.herokuapp.com/current_user/${record_id})`, {
+  fetch(`http://localhost:3001/current_user/${record_id})`, {
     method: 'PATCH',
     body: user,
     headers: {
