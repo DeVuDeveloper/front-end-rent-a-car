@@ -3,7 +3,7 @@
 <div id="top"></div>
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://github.com/Gegardus/book-a-car-frontend">
+  <a href="https://github.com/VuDej/front-end-rent-a-car">
     <img src="./src/img/RentACar.gif" alt="Logo" width="200" height="150">
   </a>
 
@@ -15,16 +15,16 @@
 
 ## Backend Repository Link
 
-<a href="https://github.com/VuDej/final-capstone-back-end/">Book A Car Backend</a>
+<a href="https://github.com/VuDej/backend-rent">Book A Car Backend</a>
 
-<a href="https://github.com/Gegardus/book-a-car-frontend#readme"><strong>Explore the docs »</strong></a>
+<a href="https://github.com/VuDej/front-end-rent-a-car#readme"><strong>Explore the docs »</strong></a>
 <br />
 <br />
- <a href="https://frontend-rent-a-car.herokuapp.com/">View Demo</a>
+ <a href="https://frontend-dejan-rentacar.herokuapp.com/">View Demo</a>
 .
-<a href="https://github.com/Gegardus/book-a-car-frontend/issues">Report Bug</a>
+<a href="https://github.com/VuDej/front-end-rent-a-car/issues">Report Bug</a>
 ·
-<a href="https://github.com/Gegardus/book-a-car-frontend/issues">Request Feature</a>
+<a href="https://github.com/VuDej/front-end-rent-a-car/issues">Request Feature</a>
 
 </div>
 
@@ -84,7 +84,7 @@ You will be needing:
 ### Clone this repository
 
 ```bash
-git clone https://github.com/Gegardus/book-a-car-frontend.git
+git clone https://github.com/VuDej/front-end-rent-a-car.git
 ```
 
 ### Move into the directory with
@@ -190,31 +190,6 @@ npm start
 | <a target="_blank" href="https://github.com/VuDej"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github profile"></a> <a target="_blank" href="https://www.linkedin.com/in/dejan-vujovic/"><img src="https://img.shields.io/badge/-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="Linkedin profile"></a> <a target="_blank" href="https://twitter.com/DejanVuj"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter profile"></a>
 |
 
-| 👤 Abdulfatai Badara |
-| -------------------- |
-
-|<a target="_blank" href="https://github.com/fobadara"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github profile"></a> <a target="_blank" href="https://www.linkedin.com/in/fob90s"><img src="https://img.shields.io/badge/-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="Linkedin profile"></a> <a target="_blank" href="https://twitter.com/fob90s"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter profile"></a>  
-<a target="_blank" href="mailto:fob90s@gmail.com"><img src="https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=Gmail&logoColor=white" alt="Gmail account"></a> <a target="_blank" href="https://wa.me/+2349066478370"> <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Whatsapp account"></a>
-(Click any of the badges to reach me. Especially whatsapp)|
-
-| 👤 Vahan |
-| -------- |
-
-| <a target="_blank" href="https://github.com/Gegardus"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github profile"></a> <a target="_blank" href="https://www.linkedin.com/in/vahan-khachvankian"><img src="https://img.shields.io/badge/-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="Linkedin profile"></a> <a target="_blank" href="https://twitter.com/Gegardus"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter profile"></a>
-|
-
-| 👤 Tresor |
-| --------- |
-
-| <a target="_blank" href="https://github.com/tresorsawasawa"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github profile"></a> <a target="_blank" href="https://www.linkedin.com/in/tresor-sawasawa/"><img src="https://img.shields.io/badge/-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="Linkedin profile"></a> <a target="_blank" href="https://twitter.com/TresorSawasaw"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter profile"></a>  
-|
-
-| 👤 francis |
-| ---------- |
-
-| <a target="_blank" href="https://github.com/githubhandle"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github profile"></a> <a target="_blank" href="https://linkedin.com/in/linkedinhandle"><img src="https://img.shields.io/badge/-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="Linkedin profile"></a> <a target="_blank" href="https://twitter.com/twitterhandle"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter profile"></a>  
-|
-
 </div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -231,7 +206,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 - Push to the Branch (git push origin feature/AmazingFeature)
 - Open a Pull Request
 
-Feel free to check the [issues page](https://github.com/Gegardus/book-a-car-frontend/issues).
+Feel free to check the [issues page](https://github.com/VuDej/front-end-rent-a-car/issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -243,8 +218,5 @@ This project is licensed by [![License: MIT](https://img.shields.io/badge/Licens
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign/modules/173005583) for the design idea.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
