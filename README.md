@@ -20,7 +20,7 @@
 <a href="https://github.com/VuDej/front-end-rent-a-car#readme"><strong>Explore the docs »</strong></a>
 <br />
 <br />
- <a href="https://frontend-dejan-rentacar.herokuapp.com/">View Demo</a>
+ <a href="https://rent-a-car-dejan.vercel.app">View Demo</a>
 .
 <a href="https://github.com/VuDej/front-end-rent-a-car/issues">Report Bug</a>
 ·
