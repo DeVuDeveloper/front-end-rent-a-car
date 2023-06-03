@@ -64,7 +64,7 @@
 
 ## Description 🏗️
 
-This is a car rental website that allows you to view a variety of cars and book them at different rates. User can see all models and model details, resrve car and pay with credit card. Admin can add and delete car. Ruby on rails with PostgreSQL and active storage as backend and REact-redux as frontend.
+The car rental website offers a wide range of car models for users to explore and book at competitive rates. It leverages the power of Ruby on Rails with PostgreSQL as the reliable database and Active Storage for efficient file management. The frontend is enhanced with React-Redux, providing a dynamic and responsive user interface. Users can easily navigate through various car models and access detailed information about each model. They can make reservations and conveniently pay for their bookings using credit cards. The administrative functionalities empower the admin to effortlessly add and remove cars from the system. Overall, the website provides a user-friendly and secure platform for renting cars, ensuring a satisfying experience for both users and administrators.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
