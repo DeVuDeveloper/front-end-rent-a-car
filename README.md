@@ -15,9 +15,9 @@
 
 ## Backend Repository Link
 
-<a href="https://github.com/VuDej/backend-rent">Book A Car Backend</a>
+<a href="https://github.com/DeVuDeveloper/backend-rent">Book A Car Backend</a>
 
-<a href="https://github.com/VuDej/front-end-rent-a-car#readme"><strong>Explore the docs »</strong></a>
+<a href="https://github.com/DeVuDeveloper/front-end-rent-a-car#readme"><strong>Explore the docs »</strong></a>
 <br />
 <br />
  <a href="https://rent-a-car-dejan.vercel.app">View Demo</a>
@@ -74,7 +74,7 @@ The car rental website offers a wide range of car models for users to explore an
 
 You will be needing:
 
-- A terminal terminal
+- A terminal
 - A code editor
 - React(follow the instructions based on your OS)
   ```bash
@@ -160,7 +160,7 @@ npm start
 | 👤 DeVuDeveloper
 | -------- |
 
-| <a target="_blank" href="https://github.com/VuDej"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github profile"></a> <a target="_blank" href="https://www.linkedin.com/in/dejan-vujovic/"><img src="https://img.shields.io/badge/-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="Linkedin profile"></a> <a target="_blank" href="https://twitter.com/DejanVuj"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter profile"></a>
+| <a target="_blank" href="https://github.com/DeVuDeveloper"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github profile"></a> <a target="_blank" href="https://www.linkedin.com/in/devuj/"><img src="https://img.shields.io/badge/-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="Linkedin profile"></a> <a target="_blank" href="https://twitter.com/DejanVuj"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter profile"></a>
 |
 
 </div>
@@ -179,7 +179,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 - Push to the Branch (git push origin feature/AmazingFeature)
 - Open a Pull Request
 
-Feel free to check the [issues page](https://github.com/VuDej/front-end-rent-a-car/issues).
+Feel free to check the [issues page](https://github.com/VuDeDeveloper/front-end-rent-a-car/issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
